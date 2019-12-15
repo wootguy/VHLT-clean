@@ -1125,7 +1125,7 @@ static surfchain_t* ReadSurfs(FILE* file)
     while (1)
     {
 #ifdef HLBSP_REMOVEHULL2
-		if (file == polyfiles[2] && g_nohull2)
+		if ((file == polyfiles[3] || file == polyfiles[2]) && g_nohull2)
 			break;
 #endif
         line++;
@@ -1235,7 +1235,7 @@ static brush_t *ReadBrushes (FILE *file)
 	while (1)
 	{
 #ifdef HLBSP_REMOVEHULL2
-		if (file == brushfiles[2] && g_nohull2)
+		if ((file == polyfiles[3] || file == polyfiles[2]) && g_nohull2)
 			break;
 #endif
 		int r;

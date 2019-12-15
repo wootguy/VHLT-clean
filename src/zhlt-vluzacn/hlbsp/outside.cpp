@@ -78,7 +78,7 @@ static void     MarkLeakTrail(portal_t* n2)
     n1 = prevleaknode;
     prevleaknode = n2;
 
-    if (!n1)
+    if (!n1 || true)
     {
         return;
     }
@@ -492,7 +492,7 @@ node_t*         FillOutside(node_t* node, const bool leakfile, const unsigned hu
         return node;
     }
 #ifdef HLBSP_REMOVEHULL2
-	if (hullnum == 2 && g_nohull2)
+	if ((hullnum == 2 || hullnum == 3) && g_nohull2)
 		return node;
 #endif
 
