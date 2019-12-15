@@ -14,7 +14,7 @@
 #define MAX_MAP_MODELS         512 //400 //vluzacn
 // variable, but 400 brush entities is very stressful on the engine and network code as it is
 
-#define MAX_MAP_BRUSHES       32768
+#define MAX_MAP_BRUSHES       262144
 // arbitrary, but large numbers of brushes generally require more lightmap's than the compiler can handle
 
 #define MAX_ENGINE_ENTITIES   16384 //1024 //vluzacn
@@ -25,7 +25,7 @@
 // abitrary, 512Kb of string data should be plenty even with TFC FGD's
 
 #define MAX_MAP_PLANES      32768 // TODO: This can be larger, because although faces can only use plane 0~32767, clipnodes can use plane 0-65535. --vluzacn
-#define MAX_INTERNAL_MAP_PLANES (256*1024)
+#define MAX_INTERNAL_MAP_PLANES (1024*1024)
 // (from email): I have been building a rather complicated map, and using your latest 
 // tools (1.61) it seemed to compile fine.  However, in game, the engine was dropping
 // a lot of faces from almost every FUNC_WALL, and also caused a strange texture 
